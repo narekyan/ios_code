@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XLY-ol-FS4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="BZz-0w-yMr">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" id="XLY-ol-FS4" customClass="StartViewController" customModule="Xapotask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pik-Yz-C2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUo-Lh-Hno">
+                                <rect key="frame" x="322" y="94" width="77" height="30"/>
+                                <state key="normal" title="Go to Xapo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoXapo" destination="XLY-ol-FS4" eventType="touchUpInside" id="eJt-ZK-sZU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gC-j5-bzv">
+                                <rect key="frame" x="82" y="767" width="250" height="45"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.39215686274509803" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="LEy-bA-5b7"/>
+                                    <constraint firstAttribute="width" constant="250" id="lGa-Ht-OJm"/>
+                                </constraints>
+                                <state key="normal" title="Enter the app"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openApp" destination="XLY-ol-FS4" eventType="touchUpInside" id="nPb-32-Mcm"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TMS-eF-nfF">
+                                <rect key="frame" x="20" y="376" width="374" height="154"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to iOS test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIf-tu-1jA">
+                                        <rect key="frame" x="69.5" y="0.0" width="235.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Test for Xapo bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDV-Sq-yfz">
+                                        <rect key="frame" x="100" y="52.5" width="174.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOrem ipsum LOrem ipsum LOrem ipsum LOrem ipsum LOrem ipsum LOrem ipsum LOrem ipsum LOrem ipsum " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRM-iR-3BU">
+                                        <rect key="frame" x="1" y="93" width="372" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zfp-9y-zat"/>
+                        <color key="backgroundColor" red="0.13333333333333333" green="0.16470588235294117" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zfp-9y-zat" firstAttribute="bottom" secondItem="5gC-j5-bzv" secondAttribute="bottom" constant="50" id="4HR-m6-esK"/>
+                            <constraint firstItem="Zfp-9y-zat" firstAttribute="trailing" secondItem="TMS-eF-nfF" secondAttribute="trailing" constant="20" id="O3h-On-wps"/>
+                            <constraint firstItem="TMS-eF-nfF" firstAttribute="leading" secondItem="Zfp-9y-zat" secondAttribute="leading" constant="20" id="ZMD-ew-o6r"/>
+                            <constraint firstItem="Zfp-9y-zat" firstAttribute="trailing" secondItem="EUo-Lh-Hno" secondAttribute="trailing" constant="15" id="ag6-hF-9Kq"/>
+                            <constraint firstItem="EUo-Lh-Hno" firstAttribute="top" secondItem="Zfp-9y-zat" secondAttribute="top" constant="50" id="duq-le-Im3"/>
+                            <constraint firstItem="TMS-eF-nfF" firstAttribute="centerY" secondItem="Zfp-9y-zat" secondAttribute="centerY" id="l7J-4c-fVD"/>
+                            <constraint firstItem="5gC-j5-bzv" firstAttribute="centerX" secondItem="Zfp-9y-zat" secondAttribute="centerX" id="qQq-WW-6Pp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDs-lF-2OD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="37.5"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="oDf-6W-C13">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="2Uf-Io-2zW" customClass="DetailViewController" customModule="Xapotask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kH7-1B-MiQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apy-aa-Npa">
+                                <rect key="frame" x="344.5" y="138" width="39.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ4-cI-SZK">
+                                <rect key="frame" x="30" y="138" width="39.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiY-Fm-qpk">
+                                <rect key="frame" x="183" y="94" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srX-eh-jOg">
+                                <rect key="frame" x="30" y="187.5" width="354" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBy-6F-NvA">
+                                <rect key="frame" x="145.5" y="237" width="123" height="30"/>
+                                <state key="normal" title="Open github page"/>
+                                <connections>
+                                    <action selector="openWebsite" destination="2Uf-Io-2zW" eventType="touchUpInside" id="EUz-xc-f5n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VRy-ZZ-YJa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VRy-ZZ-YJa" firstAttribute="trailing" secondItem="srX-eh-jOg" secondAttribute="trailing" constant="30" id="7Og-g9-So4"/>
+                            <constraint firstItem="WBy-6F-NvA" firstAttribute="centerX" secondItem="VRy-ZZ-YJa" secondAttribute="centerX" id="9Es-WR-jcy"/>
+                            <constraint firstItem="iiY-Fm-qpk" firstAttribute="top" secondItem="VRy-ZZ-YJa" secondAttribute="top" constant="50" id="DZ7-ne-sKi"/>
+                            <constraint firstItem="VRy-ZZ-YJa" firstAttribute="trailing" secondItem="apy-aa-Npa" secondAttribute="trailing" constant="30" id="XMk-qc-HTH"/>
+                            <constraint firstItem="jZ4-cI-SZK" firstAttribute="leading" secondItem="VRy-ZZ-YJa" secondAttribute="leading" constant="30" id="aFW-ZZ-Qst"/>
+                            <constraint firstItem="apy-aa-Npa" firstAttribute="centerY" secondItem="jZ4-cI-SZK" secondAttribute="centerY" id="d0E-gS-yDJ"/>
+                            <constraint firstItem="srX-eh-jOg" firstAttribute="leading" secondItem="VRy-ZZ-YJa" secondAttribute="leading" constant="30" id="jjV-cU-ePO"/>
+                            <constraint firstItem="iiY-Fm-qpk" firstAttribute="centerX" secondItem="VRy-ZZ-YJa" secondAttribute="centerX" id="uJO-Cl-7pa"/>
+                            <constraint firstItem="jZ4-cI-SZK" firstAttribute="top" secondItem="iiY-Fm-qpk" secondAttribute="bottom" constant="20" id="xlr-hk-YAv"/>
+                            <constraint firstItem="srX-eh-jOg" firstAttribute="top" secondItem="jZ4-cI-SZK" secondAttribute="bottom" constant="30" id="xpZ-Xt-Jjf"/>
+                            <constraint firstItem="WBy-6F-NvA" firstAttribute="top" secondItem="srX-eh-jOg" secondAttribute="bottom" constant="30" id="yxi-8e-cga"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="srX-eh-jOg" id="wU7-hi-Vsr"/>
+                        <outlet property="forksLabel" destination="apy-aa-Npa" id="UN9-NX-cm9"/>
+                        <outlet property="nameLabel" destination="iiY-Fm-qpk" id="pZp-im-sMM"/>
+                        <outlet property="starsLabel" destination="jZ4-cI-SZK" id="lPS-zh-p3B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exK-lL-24f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="38"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
