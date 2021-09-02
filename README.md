@@ -2,7 +2,7 @@
 
 Hi
 
-Here you can see ios xapo test solution
+Here you can see ios test solution
 I used xcode 12.5.1. didnt used 3rd party libs.
 Here you can see swift, combine, mvvm + services, coordinator, di.
 Here Repository class is connecter between server codable objects and domain objects.
