@@ -10,10 +10,17 @@ import Combine
 
 final class DetailViewController: UIViewController {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var starsLabel: UILabel!
-    @IBOutlet weak var forksLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    private lazy var nameLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var starsLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     private var cancellables = Set<AnyCancellable>()
     private var repo: RepoDetails!
@@ -22,20 +29,36 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.fetch()
+        viewModel
+            .fetch()
             .sink { repo in
                 guard let repo = repo else { return }
                 
                 self.repo = repo
                 self.updateUI()
-        }
-        .store(in: &cancellables)
+                
+            }
+            .store(in: &cancellables)
+        
+        view.addSubview(nameLabel)
+        view.addSubview(starsLabel)
+        
+        configureConstraints()
     }
+    
+    // I could use snapkit
+    private func configureConstraints() {
+        NSLayoutConstraint.activate([
 
-    @IBAction func openWebsite() {
-        UIApplication.shared.open(URL(string: repo.url)!, options: [:], completionHandler: nil)
+            nameLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
+            nameLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
+            nameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            
+            starsLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
+            starsLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 30),
+            
+        ])
     }
-
 }
 
 //MARK: private methods
@@ -44,8 +67,5 @@ extension DetailViewController {
     private func updateUI() {
         self.nameLabel.text = repo.name
         self.starsLabel.text = "⭐ \(self.repo.stars)"
-        self.forksLabel.text = "🍴 \(repo.forks)"
-        self.descriptionLabel.text = repo.description
-        
     }
 }

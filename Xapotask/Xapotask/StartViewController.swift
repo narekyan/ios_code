@@ -10,18 +10,32 @@ import Combine
 
 final class StartViewController: UIViewController {
 
+    
+    private lazy var start: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setTitle("Start", for: .normal)
+        view.addTarget(self, action: #selector(openApp), for: .touchUpInside)
+        return view
+    }()
+    
     weak var coordinator: IStartCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
               
-    }
-    
-    @IBAction func gotoXapo() {
-        UIApplication.shared.open(URL(string: "https://www.xapo.com/")!, options: [:], completionHandler: nil)
+        view.addSubview(start)
+        NSLayoutConstraint.activate([
+
+            start.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
+            start.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
+            start.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+            
+        ])
     }
 
-    @IBAction func openApp() {
+    @objc
+    private func openApp() {
         coordinator?.showList()
     }
 }

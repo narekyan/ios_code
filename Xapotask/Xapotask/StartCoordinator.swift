@@ -46,8 +46,7 @@ extension StartCoordinator {
     }
     
     private func startDetails(_ repoUrl: String) {
-        let vc = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as! DetailViewController
+        let vc = DetailViewController()
         vc.viewModel = DetailsViewModel(repoUrl)
         self.navigationController?.pushViewController(vc, animated: true)
     }
